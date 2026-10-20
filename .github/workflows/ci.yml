@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-v3:
+    name: 测试 v3（规则核心 + 资产）
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: versions/v3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 运行单元测试
+        run: npm test
+
+  check-site:
+    name: 校验静态站可发布
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 必需文件齐全
+        run: |
+          set -euo pipefail
+          for f in versions/v3/index.html \
+                   versions/v3/css/hud.css \
+                   versions/v3/vendor/three.module.js \
+                   versions/v3/assets/models/manifest.json; do
+            test -f "$f" || { echo "缺少 $f"; exit 1; }
+          done
+          echo "入口与依赖齐全"
+
+      - name: 没有绝对路径（GitHub Pages 部署在子路径下）
+        run: |
+          set -euo pipefail
+          if grep -rnE '(src|href)="/[^/]' versions/v3/index.html; then
+            echo "发现以 / 开头的绝对路径，部署到 Pages 子路径会 404"
+            exit 1
+          fi
+          echo "路径均为相对路径"
+
+  secret-scan:
+    name: 密钥扫描
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 检查常见密钥前缀
+        run: |
+          set -euo pipefail
+          if git grep -nIE '(ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{50,}|tsk_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{32,}|AKIA[0-9A-Z]{16})' -- . ':!*.md' ':!.github/**'; then
+            echo "疑似密钥被提交，请移除并使用 Secrets"
+            exit 1
+          fi
+          echo "未发现密钥"

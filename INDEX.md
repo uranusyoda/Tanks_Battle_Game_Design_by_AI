@@ -19,6 +19,8 @@
 | 找截图/渲染视频 | [`media/`](media/)（v2 截图在 `versions/v2/preview/`） |
 | 拿部署包 | [`releases/steel-bastion-sherman-v2.zip`](releases/steel-bastion-sherman-v2.zip) |
 | **看 Godot 移植可行性** | [`godot/README.md`](godot/README.md) + [`port/PILOT.md`](port/PILOT.md) |
+| **同步到 GitHub / 用分支** | [`docs/GIT-WORKFLOW.md`](docs/GIT-WORKFLOW.md) + `./tools/git-sync.sh` |
+| 在线试玩（自动部署） | <https://uranusyoda.github.io/Tanks_Battle_Game_Design_by_AI/> |
 
 ---
 
@@ -30,6 +32,9 @@
 ├── README.md                     ← 30 秒简介
 ├── index.html                    ← 可视化版本入口（版本卡片）
 ├── .gitignore
+├── .gitattributes                ← 换行/二进制规约
+├── 同步到GitHub.command           ← 双击把改动推到 GitHub
+├── .github/workflows/            ← CI（测试+校验+密钥扫描）与 Pages 部署
 ├── .secrets/
 │   └── tripo.key                 ← Tripo API key（600，已 gitignore）
 │
@@ -74,7 +79,9 @@
 │   ├── build_sherman.py          ← 早期方块版构建
 │   ├── render_preview.py         ← 动画片段渲染
 │   ├── build_tank_dossier.py     ← 生成坦克档案 DOCX
-│   └── tripo.mjs / tripo3d.py    ← 可选：文生模型
+│   ├── tripo.mjs / tripo3d.py    ← 可选：文生模型
+│   ├── git-sync.sh               ← 提交+拉取+推送（支持 --watch 自动同步）
+│   └── setup-github.sh           ← 一次性配置 Pages / topics / 分支保护
 │
 ├── media/                        ← 截图与渲染产物（不参与运行）
 │   ├── v1/                       ← 初代游戏截图、前后对比

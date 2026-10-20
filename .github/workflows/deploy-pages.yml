@@ -1,0 +1,57 @@
+name: Deploy Playable
+
+# 把 versions/v3 发布成在线可玩版本：
+#   https://uranusyoda.github.io/Tanks_Battle_Game_Design_by_AI/
+# main 分支推送（且改动涉及 v3 或本工作流）时自动更新。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'versions/v3/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: 打包站点
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: 复制 v3 为站点根目录
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -R versions/v3/. _site/
+          rm -rf _site/tests _site/docs _site/node_modules
+          touch _site/.nojekyll
+          du -sh _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: 发布到 GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
