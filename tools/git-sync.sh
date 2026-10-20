@@ -89,6 +89,20 @@ check_large_files() {
   return "$bad"
 }
 
+# 网络到 GitHub 时常抖动（尤其跨境），失败自动重试 3 次
+retry() {
+  local n=1 max=3
+  while :; do
+    "$@" && return 0
+    if [ "$n" -ge "$max" ]; then
+      return 1
+    fi
+    warn "第 $n 次失败，${n}0 秒后重试（网络抖动）…"
+    sleep $((n * 10))
+    n=$((n + 1))
+  done
+}
+
 sync_once() {
   BRANCH="$(current_branch)"
   if [ -z "$BRANCH" ]; then
@@ -101,8 +115,8 @@ sync_once() {
   fi
 
   # 1) 拉取远端，避免落后
-  if ! git fetch --quiet origin "$BRANCH" 2>/dev/null; then
-    warn "无法连接 origin（离线？），跳过本次同步。"
+  if ! retry git fetch --quiet origin "$BRANCH" 2>/dev/null; then
+    warn "连不上 origin（离线或线路不通），本次跳过。稍后重跑即可。"
     return 1
   fi
 
@@ -140,7 +154,7 @@ sync_once() {
   if remote_branch_exists "$BRANCH" && [ "$(behind_count "$BRANCH")" -gt 0 ]; then
     if [ "$DRY" -eq 1 ]; then
       dim "[dry-run] 将从 origin/$BRANCH 变基拉取 $(behind_count "$BRANCH") 个提交"
-    elif git pull --rebase --autostash --quiet origin "$BRANCH"; then
+    elif retry git pull --rebase --autostash --quiet origin "$BRANCH"; then
       ok "已拉取远端更新（rebase）"
     else
       git rebase --abort >/dev/null 2>&1
@@ -155,7 +169,7 @@ sync_once() {
       dim "[dry-run] 将首次推送分支 $BRANCH 到 origin"
       return 0
     fi
-    if git push --quiet -u origin "$BRANCH"; then
+    if retry git push --quiet -u origin "$BRANCH"; then
       ok "已创建远端分支 origin/$BRANCH"
     else
       err "推送失败：检查 GitHub 认证（见 docs/GIT-WORKFLOW.md 第 1 节）"
@@ -167,7 +181,7 @@ sync_once() {
   if [ "$(ahead_count "$BRANCH")" -gt 0 ]; then
     if [ "$DRY" -eq 1 ]; then
       dim "[dry-run] 将推送 $(ahead_count "$BRANCH") 个提交到 origin/$BRANCH"
-    elif git push --quiet origin "$BRANCH"; then
+    elif retry git push --quiet origin "$BRANCH"; then
       ok "已推送 origin/$BRANCH（$(git rev-parse --short HEAD)）"
     else
       err "推送失败：检查 GitHub 认证，或远端有他人新提交（脚本会先拉取）。"

@@ -20,29 +20,59 @@
 
 ---
 
-## 1. 首次认证（只做一次）
+## 1. 认证：本机现状与备选方案
 
-现在这台机器上还没有任何 GitHub 凭据：没有 `gh`、没有 SSH key、钥匙串里也没有 GitHub 密码。
-三种方式选一种即可。
+**本机已经配好了，日常不用再管这一节。** 当前用的是 SSH 密钥：
 
-### 方式 A：GitHub CLI（推荐）
+| 项目 | 值 |
+|---|---|
+| remote | `git@github.com:uranusyoda/Tanks_Battle_Game_Design_by_AI.git` |
+| 私钥 | `.secrets/github_ed25519`（权限 600，`.gitignore` 已忽略） |
+| 公钥 | 已添加到 GitHub 账号 `uranusyoda` 的 SSH keys（标题 `MacBook`） |
+| known_hosts | `.secrets/known_hosts`（首次连接自动写入，避免动 `~/.ssh`） |
 
-一条命令搞定登录和凭据存储，后面还能用来开 Pages、看 CI：
-
-```bash
-brew install gh          # 约 1 分钟
-gh auth login            # GitHub.com → HTTPS → Login with a web browser
-```
-
-浏览器里输入终端显示的 8 位一次性代码即可。登录后执行一次：
+验证是否仍然可用：
 
 ```bash
-gh auth setup-git        # 让 git 自动用 gh 的凭据
+git ls-remote origin | head -3     # 能列出 main / dev 就正常
 ```
 
-验证：`gh auth status` 显示 `Logged in to github.com as uranusyoda`。
+### 为什么走 SSH 而不是 HTTPS
 
-### 方式 B：HTTPS + 个人访问令牌（PAT）
+这台机器到 `github.com:443` 的线路不稳（时通时断），而 `github.com:22` 的 SSH 稳定。
+浏览器有代理不影响命令行，所以选了更可靠的一条。`.git/config` 里为此写了两项：
+
+```bash
+git config --get remote.origin.url
+git config --get core.sshCommand   # 指定私钥 + 连接超时 + 保活，避免卡死
+```
+
+网络抖动时 `git-sync.sh` 会自动重试 3 次，手工 `git push` 失败就再执行一次。
+
+### 如果要在另一台机器上配（或密钥失效了）
+
+在**新机器**上生成一对新密钥，把公钥贴到 GitHub：
+
+```bash
+ssh-keygen -t ed25519 -C "另一台机器" -f ~/.ssh/id_ed25519 -N ""
+pbcopy < ~/.ssh/id_ed25519.pub
+# 浏览器打开 https://github.com/settings/ssh/new ，粘贴 → Add SSH key
+git clone git@github.com:uranusyoda/Tanks_Battle_Game_Design_by_AI.git
+```
+
+一台机器一把钥匙，互不影响；旧机器丢了就在 GitHub 上删掉对应的 key。
+
+### 备选：GitHub CLI（装了会更方便）
+
+`gh` 能直接开 Pages、看 CI 日志、建 Release。若以后网络条件允许：
+
+```bash
+brew install gh && gh auth login && gh auth setup-git
+```
+
+### 备选：HTTPS + 个人访问令牌（PAT）
+
+适用于不想碰 SSH 的场景（注意本机 443 线路不稳，可能要重试）：
 
 1. GitHub → Settings → Developer settings → **Personal access tokens → Fine-grained tokens**
 2. Repository access 选 `Tanks_Battle_Game_Design_by_AI`，权限给 **Contents: Read and write**（想改 Pages 再加 Pages: Read and write）
@@ -55,7 +85,7 @@ git push -u origin main      # 用户名填 uranusyoda，密码粘贴 token
 
 macOS 钥匙串会记住，之后 `git push` 不再询问。
 
-### 方式 C：SSH 密钥
+### 补充：把密钥放到别的位置
 
 ```bash
 ssh-keygen -t ed25519 -C "uranusyoda@github" -f ~/.ssh/id_ed25519 -N ""
@@ -212,24 +242,34 @@ git push                      # 自动触发 GitHub Pages 在线更新
 
 ## 6. 自动化：CI 与在线部署
 
-三个工作流在 `.github/workflows/` 下，推送到 GitHub 后自动生效：
+两个工作流在 `.github/workflows/` 下，推送到 GitHub 后自动生效：
 
 | 文件 | 触发 | 做什么 |
 |---|---|---|
 | `ci.yml` | push 到 `main`/`dev`、PR | 跑 v3 的 14 项测试；校验静态站必需文件与相对路径；扫描密钥 |
-| `deploy-pages.yml` | push 到 `main` 且改动 `versions/v3/` | 把 `versions/v3` 发布到 GitHub Pages |
+| `deploy-pages.yml` | 任何 push 到 `main` | 把 `versions/v3` 发布到 GitHub Pages |
 
 在线地址：<https://uranusyoda.github.io/Tanks_Battle_Game_Design_by_AI/>
+（2026-10-20 已验证：首页、HUD、Three.js、模型 manifest 均返回 200）
 
-首次需要在仓库 Settings → Pages → Source 选 **GitHub Actions**；
-执行一次 `tools/setup-github.sh` 可以自动完成（含仓库简介、topics、main 分支保护）。
+Pages 已在本仓库启用（Settings → Pages → Source = **GitHub Actions**），无需再操作。
+改了 `versions/v3/` 并推到 `main`，等 1 分钟左右刷新网址就是新版本。
 
-查看运行结果：
+查看运行结果（网页）：<https://github.com/uranusyoda/Tanks_Battle_Game_Design_by_AI/actions>
+
+装了 `gh` 的话：
 
 ```bash
 gh run list --limit 5
 gh run watch               # 实时跟随最近一次
 gh run view --log-failed   # 只看失败日志
+```
+
+没有 `gh` 也能查运行状态（公开仓库）：
+
+```bash
+curl -s "https://api.github.com/repos/uranusyoda/Tanks_Battle_Game_Design_by_AI/actions/runs?per_page=5" \
+  | python3 -c 'import json,sys; [print(r["name"], r["status"], r["conclusion"]) for r in json.load(sys.stdin)["workflow_runs"]]'
 ```
 
 > 免费账号的 Actions 分钟数对公开仓库不限量；私有仓库每月 2000 分钟，本项目每次 CI 约 20 秒，够用。
@@ -277,8 +317,17 @@ git rebase --abort
 远端有你的新提交。`git pull --rebase origin <分支>` 后再推，或直接再跑一次 `./tools/git-sync.sh`。
 
 **文件超过 100MB 推不上去**
-GitHub 单文件上限 100MB（>50MB 会警告）。脚本会拦下 50MB 以上的文件。
-大素材放 Releases，或装 Git LFS：`brew install git-lfs && git lfs install && git lfs track "*.blend"`。
+GitHub 单文件上限 100MB（>50MB 会警告）。`git-sync.sh` 会直接拦下 50MB 以上的文件。
+
+本仓库已经踩过这个坑：Godot 导出的 `build/SteelBastion.app/Contents/MacOS/Godot` 有 331MB，
+`build/SteelBastion-mac.zip` 有 178MB，都被 `.gitignore` 排除了。
+**macOS 安装包请走 GitHub Releases**（在仓库页 Releases → Draft a new release 上传 zip），不要提交进仓库。
+其他大素材同理，或装 Git LFS：`brew install git-lfs && git lfs install && git lfs track "*.blend"`。
+
+**推送时卡住不动 / 报 `unexpected EOF`**
+本机到 `github.com:443` 的线路不稳。`git-sync.sh` 对 fetch/pull/push 都做了 3 次自动重试，
+手工 `git push` 失败就再执行一次即可。`.git/config` 里的 `core.sshCommand` 已加
+`ConnectTimeout=10`、`ServerAliveInterval=10`，卡住时最多 30 秒会自己断开重试，不会无限挂着。
 
 **`.DS_Store`、`.secrets/` 会被提交吗**
 不会，`.gitignore` 已覆盖。`.secrets/tripo.key` 永远不会进仓库——这是刻意设计。
