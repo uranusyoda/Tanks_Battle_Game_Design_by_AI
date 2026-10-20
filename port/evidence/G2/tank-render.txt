@@ -1,0 +1,7 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+OpenGL API 4.1 Metal - 89.3 - Compatibility - Using Device: Apple - Apple M2
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1035)
+2026-10-20 10:52:19.631 godot[16038:129990] +[IMKClient subclass]: chose IMKClient_Modern
+saved /Users/yoda/Desktop/工作/2026上半年/超脑AI/坦克大战3D/godot/../port/evidence/G2/tank.png err=0 size=(1280, 720)

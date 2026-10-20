@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-20",
+  "path_base": "repository root",
+  "source_blend": "assets/models/m4a1_sherman_anim.blend",
+  "exporter": "tools/blender/export_game_sherman.py",
+  "blender": "5.0.1",
+  "units": "metres (source); game scale 0.22",
+  "game_scale": 0.22,
+  "orientation": "glTF +Z forward, +Y up, origin at track contact",
+  "clips": {
+    "drive": "Drive",
+    "fire": "Fire"
+  },
+  "tags": {
+    "turret": "Turret_Pivot",
+    "gun": "Gun_Pivot",
+    "muzzle": "GunMuzzle"
+  },
+  "models": {
+    "sherman_hero": {
+      "file": "m4a1_sherman_hero.glb",
+      "lod": "hero",
+      "has_drive_animation": true,
+      "tris": 10866,
+      "bytes": 1477664,
+      "sha256": "54b7286190de96ea4a90c2f746f0cb7d34c7b973a16f9dd7fc0d3d23af5c6ab4"
+    },
+    "sherman_troop": {
+      "file": "m4a1_sherman_troop.glb",
+      "lod": "troop",
+      "has_drive_animation": false,
+      "tris": 10866,
+      "bytes": 435172,
+      "sha256": "ff6a296b0bed2540d3e612efc215debbf577e8c0421bde7f36f0b6d0d5c7bc01"
+    }
+  }
+}

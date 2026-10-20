@@ -1,0 +1,678 @@
+{
+  "assets": {
+    "sherman_hero": {
+      "clips": {
+        "drive": "Drive",
+        "fire": "Fire"
+      },
+      "fallback": "sherman_troop",
+      "file": "m4a1_sherman_hero.glb",
+      "id": "sherman_hero",
+      "licence": "project asset (procedurally built)",
+      "lod": "hero",
+      "scale": 0.22,
+      "source": "assets/models/m4a1_sherman_anim.blend",
+      "tags": {
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle",
+        "turret": "Turret_Pivot"
+      },
+      "url": "file:///Users/yoda/Desktop/%E5%B7%A5%E4%BD%9C/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4/%E8%B6%85%E8%84%91AI/%E5%9D%A6%E5%85%8B%E5%A4%A7%E6%88%983D/versions/v3/assets/models/m4a1_sherman_hero.glb"
+    },
+    "sherman_troop": {
+      "clips": {
+        "fire": "Fire"
+      },
+      "file": "m4a1_sherman_troop.glb",
+      "id": "sherman_troop",
+      "licence": "project asset (procedurally built)",
+      "lod": "troop",
+      "scale": 0.22,
+      "source": "assets/models/m4a1_sherman_anim.blend",
+      "tags": {
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle",
+        "turret": "Turret_Pivot"
+      },
+      "url": "file:///Users/yoda/Desktop/%E5%B7%A5%E4%BD%9C/2026%E4%B8%8A%E5%8D%8A%E5%B9%B4/%E8%B6%85%E8%84%91AI/%E5%9D%A6%E5%85%8B%E5%A4%A7%E6%88%983D/versions/v3/assets/models/m4a1_sherman_troop.glb"
+    }
+  },
+  "enemies": {
+    "line": {
+      "dmg": 20,
+      "fire": 2,
+      "hp": 3,
+      "id": "line",
+      "paint": {
+        "olive": 4277838,
+        "oliveDark": 2698546,
+        "star": 2830132
+      },
+      "range": 7,
+      "scale": 1,
+      "score": 200,
+      "speed": 1.6
+    },
+    "scout": {
+      "dmg": 10,
+      "fire": 1.5,
+      "hp": 1,
+      "id": "scout",
+      "paint": {
+        "olive": 4672596,
+        "oliveDark": 3093304,
+        "star": 2830132
+      },
+      "range": 5,
+      "scale": 0.8,
+      "score": 100,
+      "speed": 3.6
+    },
+    "sniper": {
+      "dmg": 30,
+      "fire": 2.5,
+      "hp": 2,
+      "id": "sniper",
+      "longBarrel": true,
+      "paint": {
+        "olive": 4738647,
+        "oliveDark": 3159356,
+        "star": 2830132
+      },
+      "range": 9,
+      "scale": 0.9,
+      "score": 300,
+      "speed": 2.2
+    }
+  },
+  "levels": {
+    "LEVEL": {
+      "bunker": [
+        [
+          12,
+          4
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ]
+      ],
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          1,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          9,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "maxOnField": 4,
+      "name": "Training Grounds",
+      "spawnCols": [
+        1,
+        4,
+        8,
+        11
+      ],
+      "waves": [
+        {
+          "list": [
+            "scout",
+            "scout",
+            "line"
+          ],
+          "t": 0
+        },
+        {
+          "list": [
+            "line",
+            "line",
+            "scout"
+          ],
+          "t": 15
+        },
+        {
+          "list": [
+            "line",
+            "sniper",
+            "scout",
+            "scout"
+          ],
+          "t": 30
+        }
+      ]
+    },
+    "SHOWROOM": {
+      "bunker": [],
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "maxOnField": 0,
+      "name": "Garage",
+      "spawnCols": [
+        0
+      ],
+      "waves": []
+    }
+  },
+  "meta": {
+    "source": "versions/v3",
+    "version": "3.0.0"
+  },
+  "powerups": [
+    {
+      "color": 16765527,
+      "id": "star",
+      "label": "Star",
+      "w": 20
+    },
+    {
+      "color": 14964541,
+      "id": "grenade",
+      "label": "Grenade",
+      "w": 12
+    },
+    {
+      "color": 14257722,
+      "id": "shovel",
+      "label": "Shovel",
+      "w": 12
+    },
+    {
+      "color": 8376808,
+      "id": "clock",
+      "label": "Clock",
+      "w": 14
+    },
+    {
+      "color": 7315432,
+      "id": "helmet",
+      "label": "Helmet",
+      "w": 16
+    },
+    {
+      "color": 8243550,
+      "id": "tank",
+      "label": "1UP",
+      "w": 8
+    }
+  ],
+  "tanks": {
+    "sherman": {
+      "bspd": 9,
+      "cls": "中型坦克 · WWII",
+      "dmg": 25,
+      "fire": 0.5,
+      "hp": 100,
+      "id": "sherman",
+      "model": {
+        "lod": "hero"
+      },
+      "muzzle": 0.82,
+      "name": "M4A1 Sherman",
+      "paint": {
+        "olive": 8031062,
+        "oliveDark": 4805686,
+        "star": 15921120
+      },
+      "skill": {
+        "cd": 20,
+        "desc": "释放烟幕 5 秒，敌方 AI 无法锁定你",
+        "name": "烟幕掩护"
+      },
+      "speed": 3,
+      "turn": 2.8,
+      "turretSpeed": 6
+    },
+    "t90": {
+      "bspd": 12,
+      "cls": "主战坦克 · Modern",
+      "dmg": 30,
+      "fire": 0.4,
+      "hp": 120,
+      "id": "t90",
+      "model": {
+        "lod": "hero"
+      },
+      "muzzle": 0.82,
+      "name": "T-90",
+      "paint": {
+        "olive": 5792331,
+        "oliveDark": 3422766,
+        "star": 12174000
+      },
+      "skill": {
+        "cd": 25,
+        "desc": "吸收接下来 3 次伤害（30 秒内）",
+        "name": "反应装甲"
+      },
+      "speed": 2.6,
+      "turn": 2.4,
+      "turretSpeed": 7
+    },
+    "tiger": {
+      "bspd": 10,
+      "cls": "重型坦克 · WWII",
+      "dmg": 60,
+      "fire": 1.2,
+      "hp": 160,
+      "id": "tiger",
+      "model": {
+        "lod": "hero"
+      },
+      "muzzle": 0.86,
+      "name": "Tiger I",
+      "paint": {
+        "olive": 10132344,
+        "oliveDark": 6514250,
+        "star": 14603965
+      },
+      "skill": {
+        "cd": 15,
+        "desc": "下一炮击穿钢墙，并贯穿最多 2 个敌人",
+        "name": "穿甲弹"
+      },
+      "speed": 1.8,
+      "turn": 1.6,
+      "turretSpeed": 3.6
+    }
+  },
+  "viewTuning": {
+    "shadow": {
+      "length": 1.55,
+      "opacity": 0.42,
+      "width": 0.95
+    },
+    "treadRate": 0.9
+  }
+}

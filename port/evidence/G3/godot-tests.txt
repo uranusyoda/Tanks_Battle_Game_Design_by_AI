@@ -1,0 +1,27 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1035)
+=== G3 core tests ===
+PASS content: every tank and enemy in the waves is defined
+PASS grid: a tank cannot drive through a brick
+PASS rules: firing destroys a brick and emits a semantic event
+PASS rules: an enemy shot damages the player
+PASS rules: a shield absorbs a hit without losing HP
+PASS rules: killing the eagle loses the battle, even with the player shot
+PASS rules: clearing the last wave wins
+PASS rules: a star power-up improves rate of fire exactly once
+PASS rules: same seed + same inputs produce the same battle
+PASS layering: core is pure RefCounted with no engine/asset calls
+=== G1/G3 asset contract ===
+  m4a1_sherman_hero.glb: meshes=199 track_links=146 clips=["Drive", "Fire"]
+PASS asset contract: sherman_hero (tags + Drive/Fire)
+  m4a1_sherman_troop.glb: meshes=9 track_links=0 clips=["Fire"]
+PASS asset contract: sherman_troop (tags + Fire, no Drive)
+=== G3 golden trace replay ===
+PASS trace drive_into_brick (120.0 steps)
+PASS trace eagle_fail (120.0 steps)
+PASS trace fire_brick (120.0 steps)
+PASS trace hit_enemy (300.0 steps)
+PASS trace skill_smoke (180.0 steps)
+ALL TESTS PASSED

@@ -1,0 +1,37 @@
+/** Enemy profiles. Mechanics numbers only; `paint` is a view hint. */
+export const ENEMY_TYPES = {
+  scout: {
+    id: 'scout',
+    hp: 1,
+    speed: 3.6,
+    fire: 1.5,
+    dmg: 10,
+    range: 5,
+    score: 100,
+    scale: 0.8,
+    paint: { olive: 0x474c54, oliveDark: 0x2f3338, star: 0x2b2f34 },
+  },
+  line: {
+    id: 'line',
+    hp: 3,
+    speed: 1.6,
+    fire: 2.0,
+    dmg: 20,
+    range: 7,
+    score: 200,
+    scale: 1.0,
+    paint: { olive: 0x41464e, oliveDark: 0x292d32, star: 0x2b2f34 },
+  },
+  sniper: {
+    id: 'sniper',
+    hp: 2,
+    speed: 2.2,
+    fire: 2.5,
+    dmg: 30,
+    range: 9,
+    score: 300,
+    scale: 0.9,
+    longBarrel: true,
+    paint: { olive: 0x484e57, oliveDark: 0x30353c, star: 0x2b2f34 },
+  },
+};

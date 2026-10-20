@@ -1,0 +1,11 @@
+{
+  "name": "steel-bastion-3d-v3",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "Steel Bastion 3D — v3 iteration baseline (forked from v2.0.0). Same layered core/content/assets/view architecture, new work lands here.",
+  "scripts": {
+    "start": "python3 -m http.server 4174",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

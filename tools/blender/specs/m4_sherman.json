@@ -1,0 +1,52 @@
+{
+  "id": "m4_sherman",
+  "builder": "m4_sherman",
+  "collection": null,
+  "file": "m4_sherman",
+  "out_dir": "assets/models",
+
+  "params": {
+    "scale": 1.0
+  },
+
+  "material_overrides": {},
+
+  "strip": [],
+
+  "stats_exclude": ["Exhaust_*", "FireSmoke_*", "MuzzleFlash"],
+
+  "tags": {
+    "Turret_Pivot": "turret_yaw",
+    "Gun_Pivot": "gun_pitch",
+    "GunMuzzle": "muzzle"
+  },
+
+  "export": {
+    "export_format": "GLB",
+    "export_apply": true,
+    "export_yup": true,
+    "export_animations": true,
+    "export_animation_mode": "NLA_TRACKS"
+  },
+
+  "lod": {
+    "enabled": false,
+    "ratios": [0.45, 0.2]
+  },
+
+  "preview": {
+    "enabled": true,
+    "resolution": [1280, 880],
+    "samples": 48,
+    "views": ["hero", "side", "front"]
+  },
+
+  "validate": {
+    "max_tris": 40000,
+    "max_bytes": 4194304,
+    "max_materials": 10,
+    "require_nodes": ["Turret_Pivot", "Gun_Pivot", "GunMuzzle"],
+    "ground_tolerance": 0.02,
+    "bbox_max_m": [3.2, 8.0, 4.5]
+  }
+}

@@ -1,0 +1,41 @@
+* text=auto eol=lf
+
+# ---- 二进制：不做换行转换、不做文本 diff ----
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.mp4  binary
+*.webm binary
+*.glb  binary
+*.gltf binary
+*.zip  binary
+*.blend  binary
+*.blend1 binary
+*.ttf  binary
+*.woff binary
+*.woff2 binary
+
+# ---- 文本：统一 LF ----
+*.md      text eol=lf
+*.txt     text eol=lf
+*.js      text eol=lf
+*.mjs     text eol=lf
+*.json    text eol=lf
+*.html    text eol=lf
+*.css     text eol=lf
+*.sh      text eol=lf
+*.command text eol=lf
+*.py      text eol=lf
+*.gd      text eol=lf
+*.tscn    text eol=lf
+*.cfg     text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+
+# ---- GitHub 语言统计：第三方库与素材不计入 ----
+versions/*/vendor/** linguist-vendored
+media/**            linguist-documentation
+docs/**             linguist-documentation
+port/**             linguist-documentation
+assets/**           linguist-documentation

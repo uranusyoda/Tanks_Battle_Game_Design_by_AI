@@ -1,0 +1,26 @@
+
+> steel-bastion-3d-v3@3.0.0 test
+> node --test tests/*.test.mjs
+
+✔ asset contract: sherman_hero (2.979791ms)
+✔ asset contract: sherman_troop (0.44425ms)
+✔ asset manifest: LOD split is explicit (0.059083ms)
+✔ content: every tank and enemy in the waves is defined (0.849708ms)
+✔ grid: a tank cannot drive through a brick (1.024334ms)
+✔ rules: firing destroys a brick and emits a semantic event (0.331167ms)
+✔ rules: an enemy shot damages the player (0.625958ms)
+✔ rules: a shield absorbs a hit without losing HP (0.244542ms)
+✔ rules: killing the eagle loses the battle, even with the player shot (0.141209ms)
+✔ rules: clearing the last wave wins (0.082292ms)
+✔ rules: a star power-up improves rate of fire exactly once (0.149875ms)
+✔ rules: same seed + same inputs produce the same battle (1.241125ms)
+✔ layering: the rules core never imports Three.js, the DOM or asset code (1.021792ms)
+✔ layering: content files are data only (0.322958ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.433583

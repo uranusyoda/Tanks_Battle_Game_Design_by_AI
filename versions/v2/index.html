@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>钢铁防线 3D · Sherman Edition</title>
+<link rel="stylesheet" href="./css/hud.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/addons/"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="topbar">
+  <span>1P <b id="score">0</b></span>
+  <span>🛡 ×<b id="lives">3</b></span>
+  <span class="hi">HI <b id="hiscore">0</b></span>
+  <span class="stage">SHERMAN EDITION</span>
+</div>
+
+<div id="sidebar">
+  <div class="sb-title">敌军残余 <b id="ecount">0</b></div>
+  <div id="enemyIcons"></div>
+  <div class="sb-title">技能 [E]</div>
+  <div id="skillBox"><div id="skillFill"></div><span id="skillName">—</span></div>
+  <div id="skillState"></div>
+</div>
+
+<div id="hpwrap"><span class="hplabel">HP</span><div id="hpouter"><div id="hpbar"></div></div></div>
+<div id="msg"></div>
+<div id="hint">W/S 前进后退 · A/D 车体转向 · 鼠标瞄准<br>空格/点击 开火 · E 技能 · C 切换视角 · R 返回车库</div>
+<div id="vignette"></div>
+<div id="modelCredit">M4A1(76)W SHERMAN · MODEL + ANIMATION FROM m4a1_sherman_anim.blend</div>
+<div id="overlay"></div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

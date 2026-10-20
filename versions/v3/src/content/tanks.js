@@ -1,0 +1,55 @@
+/**
+ * Player tank content. Pure data — no Three.js objects, no asset handles.
+ * `paint` is a presentation hint consumed by the asset/view layer; changing it
+ * never changes handling, damage or cooldowns.
+ */
+export const TANKS = {
+  sherman: {
+    id: 'sherman',
+    name: 'M4A1 Sherman',
+    cls: '中型坦克 · WWII',
+    hp: 100,
+    speed: 3.0,
+    turn: 2.8,
+    fire: 0.5,
+    dmg: 25,
+    bspd: 9,
+    turretSpeed: 6.0,
+    muzzle: 0.82,
+    model: { lod: 'hero' },
+    paint: { olive: 0x7a8b56, oliveDark: 0x495436, star: 0xf2efe0 },
+    skill: { name: '烟幕掩护', cd: 20, desc: '释放烟幕 5 秒，敌方 AI 无法锁定你' },
+  },
+  tiger: {
+    id: 'tiger',
+    name: 'Tiger I',
+    cls: '重型坦克 · WWII',
+    hp: 160,
+    speed: 1.8,
+    turn: 1.6,
+    fire: 1.2,
+    dmg: 60,
+    bspd: 10,
+    turretSpeed: 3.6,
+    muzzle: 0.86,
+    model: { lod: 'hero' },
+    paint: { olive: 0x9a9b78, oliveDark: 0x63664a, star: 0xded6bd },
+    skill: { name: '穿甲弹', cd: 15, desc: '下一炮击穿钢墙，并贯穿最多 2 个敌人' },
+  },
+  t90: {
+    id: 't90',
+    name: 'T-90',
+    cls: '主战坦克 · Modern',
+    hp: 120,
+    speed: 2.6,
+    turn: 2.4,
+    fire: 0.4,
+    dmg: 30,
+    bspd: 12,
+    turretSpeed: 7.0,
+    muzzle: 0.82,
+    model: { lod: 'hero' },
+    paint: { olive: 0x58624b, oliveDark: 0x343a2e, star: 0xb9c2b0 },
+    skill: { name: '反应装甲', cd: 25, desc: '吸收接下来 3 次伤害（30 秒内）' },
+  },
+};

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/golden-trace.schema.json",
+  "title": "Cross-engine golden trace",
+  "type": "object",
+  "required": [
+    "schema",
+    "scenario",
+    "seed",
+    "dt",
+    "steps",
+    "commands",
+    "events",
+    "samples",
+    "final",
+    "digest"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "scenario": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "dt": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "steps": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "root": { "type": "string" },
+        "commit": { "type": "string" },
+        "manifest": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "op", "args"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 0 },
+          "op": { "type": "string" },
+          "args": { "type": "array" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "type"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 0 },
+          "type": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "state"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 0 },
+          "state": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "final": {
+      "type": "object"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

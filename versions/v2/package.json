@@ -1,0 +1,11 @@
+{
+  "name": "steel-bastion-3d-sherman",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Steel Bastion 3D — Sherman Edition. Game mechanics core, content, assets and Three.js view are separate layers.",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

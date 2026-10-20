@@ -1,0 +1,2618 @@
+{
+  "schema": 1,
+  "scenario": "hit_enemy",
+  "source": {
+    "root": "versions/v3",
+    "version": "3.0.0"
+  },
+  "seed": 7,
+  "dt": 0.016666666666666666,
+  "dt_num": 1,
+  "dt_den": 60,
+  "steps": 300,
+  "tankId": "sherman",
+  "contentHash": "cbec06a4d634396bd9258d60f59ffe6b29bb67a3b9ba835a776f14801f27d59e",
+  "level": {
+    "name": "Trace Arena",
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "waves": [
+      {
+        "t": 0,
+        "list": [
+          "line"
+        ]
+      }
+    ],
+    "spawnCols": [
+      6
+    ],
+    "maxOnField": 1,
+    "bunker": []
+  },
+  "initial": null,
+  "commands": [
+    {
+      "step": 0,
+      "op": "aimAt",
+      "args": [
+        0,
+        -6
+      ]
+    },
+    {
+      "step": 0,
+      "op": "setTrigger",
+      "args": [
+        true
+      ]
+    }
+  ],
+  "events": [
+    {
+      "step": 0,
+      "type": "fire",
+      "from": "player",
+      "shooterId": "player",
+      "x": 1.0042103753008296e-16,
+      "z": 4.18,
+      "yaw": 3.141592653589793,
+      "ap": false
+    },
+    {
+      "step": 0,
+      "type": "message",
+      "text": "第 1 波来袭"
+    },
+    {
+      "step": 0,
+      "type": "line",
+      "id": "e0",
+      "x": 0,
+      "z": -6,
+      "scale": 1
+    },
+    {
+      "step": 31,
+      "type": "fire",
+      "from": "player",
+      "shooterId": "player",
+      "x": 1.0042103753008296e-16,
+      "z": 4.18,
+      "yaw": 3.141592653589793,
+      "ap": false
+    },
+    {
+      "step": 54,
+      "type": "enemyHit",
+      "id": "e0",
+      "x": 0,
+      "z": -4.533333333333348,
+      "damage": 25
+    },
+    {
+      "step": 62,
+      "type": "fire",
+      "from": "player",
+      "shooterId": "player",
+      "x": 1.0042103753008296e-16,
+      "z": 4.18,
+      "yaw": 3.141592653589793,
+      "ap": false
+    },
+    {
+      "step": 80,
+      "type": "enemyHit",
+      "id": "e0",
+      "x": 0,
+      "z": -3.8400000000000194,
+      "damage": 25
+    },
+    {
+      "step": 93,
+      "type": "fire",
+      "from": "player",
+      "shooterId": "player",
+      "x": 1.0042103753008296e-16,
+      "z": 4.18,
+      "yaw": 3.141592653589793,
+      "ap": false
+    },
+    {
+      "step": 107,
+      "type": "enemyHit",
+      "id": "e0",
+      "x": 0,
+      "z": -3.1200000000000148,
+      "damage": 25
+    },
+    {
+      "step": 107,
+      "type": "explosion",
+      "x": 0,
+      "z": -3.1200000000000148,
+      "scale": 1.2
+    },
+    {
+      "step": 107,
+      "type": "enemyKilled",
+      "id": "e0",
+      "x": 0,
+      "z": -3.1200000000000148,
+      "score": 200
+    },
+    {
+      "step": 107,
+      "type": "gameover",
+      "win": true,
+      "reason": "全部敌军歼灭",
+      "score": 200
+    }
+  ],
+  "samples": [
+    {
+      "step": 0,
+      "state": {
+        "t": 0.016666666666666666,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.9833333333333334,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.973333333333334,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 1.1879073951729327e-16,
+            "z": 4.029999999999999,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 5,
+      "state": {
+        "t": 0.09999999999999999,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.9000000000000004,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.840000000000002,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 2.106392494533448e-16,
+            "z": 3.28,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 10,
+      "state": {
+        "t": 0.18333333333333332,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.8166666666666673,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.70666666666667,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 3.0248775938939624e-16,
+            "z": 2.5300000000000002,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 15,
+      "state": {
+        "t": 0.26666666666666666,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.7333333333333343,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.573333333333338,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 3.9433626932544765e-16,
+            "z": 1.7800000000000007,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 20,
+      "state": {
+        "t": 0.35,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.6500000000000012,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.440000000000006,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 4.861847792614992e-16,
+            "z": 1.0300000000000011,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 25,
+      "state": {
+        "t": 0.4333333333333333,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.5666666666666682,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.306666666666674,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 5.780332891975508e-16,
+            "z": 0.280000000000001,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 30,
+      "state": {
+        "t": 0.5166666666666666,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.4833333333333352,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.173333333333342,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 6.698817991336025e-16,
+            "z": -0.469999999999999,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 35,
+      "state": {
+        "t": 0.6000000000000002,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.4000000000000021,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -5.04000000000001,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 7.617303090696541e-16,
+            "z": -1.2199999999999989,
+            "from": "player"
+          },
+          {
+            "id": "b1",
+            "x": 1.922695474661345e-16,
+            "z": 3.4299999999999997,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 40,
+      "state": {
+        "t": 0.6833333333333338,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.316666666666669,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.906666666666678,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 8.535788190057058e-16,
+            "z": -1.9699999999999984,
+            "from": "player"
+          },
+          {
+            "id": "b1",
+            "x": 2.8411805740218596e-16,
+            "z": 2.68,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 45,
+      "state": {
+        "t": 0.7666666666666674,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.233333333333336,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.773333333333346,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 9.45427328941757e-16,
+            "z": -2.719999999999998,
+            "from": "player"
+          },
+          {
+            "id": "b1",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 50,
+      "state": {
+        "t": 0.850000000000001,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.150000000000003,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.640000000000014,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 75
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b0",
+            "x": 1.0372758388778082e-15,
+            "z": -3.4699999999999975,
+            "from": "player"
+          },
+          {
+            "id": "b1",
+            "x": 4.678150772742888e-16,
+            "z": 1.180000000000001,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 55,
+      "state": {
+        "t": 0.9333333333333346,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 1.06666666666667,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.506666666666682,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 50
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b1",
+            "x": 5.596635872103405e-16,
+            "z": 0.43000000000000105,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 60,
+      "state": {
+        "t": 1.016666666666668,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.9833333333333368,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.37333333333335,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 50
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b1",
+            "x": 6.515120971463921e-16,
+            "z": -0.31999999999999895,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 65,
+      "state": {
+        "t": 1.100000000000001,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.9000000000000032,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.240000000000018,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 50
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b1",
+            "x": 7.433606070824438e-16,
+            "z": -1.069999999999999,
+            "from": "player"
+          },
+          {
+            "id": "b2",
+            "x": 1.738998454789242e-16,
+            "z": 3.5799999999999996,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 70,
+      "state": {
+        "t": 1.183333333333334,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.8166666666666696,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -4.106666666666686,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 50
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b1",
+            "x": 8.352091170184955e-16,
+            "z": -1.8199999999999985,
+            "from": "player"
+          },
+          {
+            "id": "b2",
+            "x": 2.6574835541497567e-16,
+            "z": 2.83,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 75,
+      "state": {
+        "t": 1.266666666666667,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.7333333333333361,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.9733333333333536,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 50
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b1",
+            "x": 9.270576269545468e-16,
+            "z": -2.569999999999998,
+            "from": "player"
+          },
+          {
+            "id": "b2",
+            "x": 3.575968653510271e-16,
+            "z": 2.0800000000000005,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 80,
+      "state": {
+        "t": 1.35,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.6500000000000025,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.8400000000000194,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 4.494453752870785e-16,
+            "z": 1.330000000000001,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 85,
+      "state": {
+        "t": 1.4333333333333331,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.5666666666666689,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.706666666666685,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 5.412938852231302e-16,
+            "z": 0.5800000000000011,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 90,
+      "state": {
+        "t": 1.5166666666666662,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.48333333333333534,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.573333333333351,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 6.331423951591818e-16,
+            "z": -0.16999999999999896,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 95,
+      "state": {
+        "t": 1.5999999999999992,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.400000000000002,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.440000000000017,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 7.249909050952335e-16,
+            "z": -0.919999999999999,
+            "from": "player"
+          },
+          {
+            "id": "b3",
+            "x": 1.5553014349171388e-16,
+            "z": 3.7299999999999995,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 100,
+      "state": {
+        "t": 1.6833333333333322,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.3166666666666687,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.3066666666666826,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 8.168394150312851e-16,
+            "z": -1.6699999999999986,
+            "from": "player"
+          },
+          {
+            "id": "b3",
+            "x": 2.473786534277654e-16,
+            "z": 2.98,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 105,
+      "state": {
+        "t": 1.7666666666666653,
+        "phase": "battle",
+        "score": 0,
+        "wave": 1,
+        "killed": 0,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.2333333333333354,
+          "smoke": 0
+        },
+        "enemies": [
+          {
+            "id": "e0",
+            "x": 0,
+            "z": -3.1733333333333484,
+            "heading": 0,
+            "turretYaw": 0,
+            "hp": 25
+          }
+        ],
+        "bullets": [
+          {
+            "id": "b2",
+            "x": 9.086879249673366e-16,
+            "z": -2.419999999999998,
+            "from": "player"
+          },
+          {
+            "id": "b3",
+            "x": 3.392271633638168e-16,
+            "z": 2.2300000000000004,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 110,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 115,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 120,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 125,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 130,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 135,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 140,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 145,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 150,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 155,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 160,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 165,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 170,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 175,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 180,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 185,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 190,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 195,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 200,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 205,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 210,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 215,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 220,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 225,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 230,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 235,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 240,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 245,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 250,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 255,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 260,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 265,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 270,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 275,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 280,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 285,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 290,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    },
+    {
+      "step": 295,
+      "state": {
+        "t": 1.7999999999999985,
+        "phase": "won",
+        "score": 200,
+        "wave": 1,
+        "killed": 1,
+        "skillCd": 0,
+        "player": {
+          "x": 0,
+          "z": 5,
+          "heading": 3.141592653589793,
+          "turretYaw": 0,
+          "hp": 100,
+          "lives": 3,
+          "alive": true,
+          "invuln": 0.20000000000000207,
+          "smoke": 0
+        },
+        "enemies": [],
+        "bullets": [
+          {
+            "id": "b3",
+            "x": 3.7596656733823737e-16,
+            "z": 1.9300000000000006,
+            "from": "player"
+          }
+        ],
+        "pickups": [],
+        "eagle": true
+      }
+    }
+  ],
+  "final": {
+    "t": 1.7999999999999985,
+    "phase": "won",
+    "score": 200,
+    "wave": 1,
+    "killed": 1,
+    "skillCd": 0,
+    "player": {
+      "x": 0,
+      "z": 5,
+      "heading": 3.141592653589793,
+      "turretYaw": 0,
+      "hp": 100,
+      "lives": 3,
+      "alive": true,
+      "invuln": 0.20000000000000207,
+      "smoke": 0
+    },
+    "enemies": [],
+    "bullets": [
+      {
+        "id": "b3",
+        "x": 3.7596656733823737e-16,
+        "z": 1.9300000000000006,
+        "from": "player"
+      }
+    ],
+    "pickups": [],
+    "eagle": true
+  },
+  "digest": "a86f7669a378d01fc1b4c5acef5585019f22940dee88ab5120e784bbe9a07851"
+}

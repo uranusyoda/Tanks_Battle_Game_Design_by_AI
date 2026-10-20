@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "source": {
+    "root": "v2",
+    "version": "2.0.0",
+    "commit": "REPLACE_WITH_GIT_COMMIT",
+    "manifest": "port/source-manifest.sha256"
+  },
+  "target": {
+    "root": "godot",
+    "engine": "4.7.1",
+    "renderer": "gl_compatibility"
+  },
+  "parity": {
+    "level": "P1",
+    "tolerance": {
+      "position": 1e-5,
+      "angle": 1e-5,
+      "hp": 0,
+      "score": 0,
+      "eventSequence": 0
+    }
+  },
+  "mappings": [
+    {
+      "source": "src/core/constants.js",
+      "target": "core/constants.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "src/core/rng.js",
+      "target": "core/rng.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "src/core/grid.js",
+      "target": "core/grid.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "src/core/battle.js",
+      "target": "core/battle.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "src/content/tanks.js",
+      "target": "content/tanks.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "src/content/enemies.js",
+      "target": "content/enemies.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "src/content/levels.js",
+      "target": "content/levels.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "src/content/powerups.js",
+      "target": "content/powerups.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "src/content/assets.js",
+      "target": "content/assets.json",
+      "kind": "assets",
+      "gate": "G1"
+    },
+    {
+      "source": "src/app/game.js",
+      "target": "app/game.gd",
+      "kind": "app",
+      "gate": "G4"
+    },
+    {
+      "source": "src/view/stage.js",
+      "target": "view/stage.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "src/view/world.js",
+      "target": "view/world.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "src/view/tanks.js",
+      "target": "view/tank_layer.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "src/assets/tankRig.js",
+      "target": "view/tank_rig.gd",
+      "kind": "assets",
+      "gate": "G4"
+    },
+    {
+      "source": "src/assets/modelStore.js",
+      "target": "assets/model_store.gd",
+      "kind": "assets",
+      "gate": "G1"
+    },
+    {
+      "source": "src/view/projectiles.js",
+      "target": "view/projectile_layer.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "src/view/fx.js",
+      "target": "view/fx.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "src/view/camera.js",
+      "target": "view/camera_rig.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "src/view/hud.js",
+      "target": "view/hud.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "src/platform/input.js",
+      "target": "platform/input_router.gd",
+      "kind": "platform",
+      "gate": "G4"
+    },
+    {
+      "source": "src/platform/audio.js",
+      "target": "platform/audio.gd",
+      "kind": "platform",
+      "gate": "G6"
+    },
+    {
+      "source": "src/platform/storage.js",
+      "target": "platform/save.gd",
+      "kind": "platform",
+      "gate": "G6"
+    }
+  ],
+  "assets": [
+    {
+      "id": "sherman_hero",
+      "source": "assets/models/m4a1_sherman_hero.glb",
+      "target": "assets/models/m4a1_sherman_hero.glb",
+      "sha256": "REPLACE_WITH_SHA256",
+      "scale": 0.22,
+      "up": "+Y",
+      "forward": "+Z",
+      "origin": "track_contact_ground",
+      "tags": {
+        "turret": "Turret_Pivot",
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle"
+      },
+      "clips": {
+        "drive": "Drive",
+        "fire": "Fire"
+      },
+      "lod": "hero"
+    },
+    {
+      "id": "sherman_troop",
+      "source": "assets/models/m4a1_sherman_troop.glb",
+      "target": "assets/models/m4a1_sherman_troop.glb",
+      "sha256": "REPLACE_WITH_SHA256",
+      "scale": 0.22,
+      "up": "+Y",
+      "forward": "+Z",
+      "origin": "track_contact_ground",
+      "tags": {
+        "turret": "Turret_Pivot",
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle"
+      },
+      "clips": {
+        "drive": null,
+        "fire": "Fire"
+      },
+      "lod": "troop"
+    }
+  ],
+  "deviations": []
+}

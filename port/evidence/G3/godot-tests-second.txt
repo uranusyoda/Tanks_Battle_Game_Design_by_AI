@@ -1,0 +1,54 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1035)
+=== G3 core tests ===
+PASS content: every tank and enemy in the waves is defined
+PASS grid: a tank cannot drive through a brick
+PASS rules: firing destroys a brick and emits a semantic event
+PASS rules: an enemy shot damages the player
+PASS rules: a shield absorbs a hit without losing HP
+PASS rules: killing the eagle loses the battle, even with the player shot
+PASS rules: clearing the last wave wins
+PASS rules: a star power-up improves rate of fire exactly once
+PASS rules: same seed + same inputs produce the same battle
+PASS layering: core is pure RefCounted with no engine/asset calls
+=== G1/G3 asset contract ===
+  m4a1_sherman_hero.glb: meshes=199 track_links=146 clips=["Drive", "Fire"]
+PASS asset contract: sherman_hero (tags + Drive/Fire)
+  m4a1_sherman_troop.glb: meshes=9 track_links=0 clips=["Fire"]
+PASS asset contract: sherman_troop (tags + Fire, no Drive)
+=== G3 golden trace replay ===
+FAIL trace drive_into_brick
+  - events[2].step 60.000000000 != 61.000000000 (delta 1.0)
+  - samples[12].state.enemies size 2 != 1
+  - samples[13].state.enemies[1].x -1.956177064 != -1.965741578 (delta 0.00956451456739)
+  - samples[13].state.enemies[1].z -5.642914263 != -5.702147151 (delta 0.05923288765463)
+  - samples[13].state.enemies[1].heading 0.118535470 != 0.118504493 (delta 0.00003097673471)
+  - samples[14].state.enemies[1].x -1.937291985 != -1.946867484 (delta 0.0095754992968)
+  - samples[14].state.enemies[1].z -5.343609260 != -5.402841482 (delta 0.05923222220447)
+  - samples[14].state.enemies[1].heading 0.026792434 != 0.026750207 (delta 0.00004222667371)
+PASS trace eagle_fail (120.0 steps)
+FAIL trace fire_brick
+  - events[5].step 60.000000000 != 61.000000000 (delta 1.0)
+  - samples[12].state.enemies size 2 != 1
+  - samples[13].state.enemies[1].x -1.956177064 != -1.965741578 (delta 0.00956451456739)
+  - samples[13].state.enemies[1].z -5.642914263 != -5.702147151 (delta 0.05923288765463)
+  - samples[13].state.enemies[1].heading 0.118535470 != 0.118504493 (delta 0.00003097673471)
+  - samples[14].state.enemies[1].x -1.937291985 != -1.946867484 (delta 0.0095754992968)
+  - samples[14].state.enemies[1].z -5.343609260 != -5.402841482 (delta 0.05923222220447)
+  - samples[14].state.enemies[1].heading 0.026792434 != 0.026750207 (delta 0.00004222667371)
+PASS trace hit_enemy (300.0 steps)
+FAIL trace skill_smoke
+  - events[4].step 60.000000000 != 61.000000000 (delta 1.0)
+  - events[5].step 120.000000000 != 122.000000000 (delta 2.0)
+  - samples[12].state.enemies size 2 != 1
+  - samples[13].state.enemies[1].x -1.956177064 != -1.965741578 (delta 0.00956451456739)
+  - samples[13].state.enemies[1].z -5.642914263 != -5.702147151 (delta 0.05923288765463)
+  - samples[13].state.enemies[1].heading 0.118535470 != 0.118504493 (delta 0.00003097673471)
+  - samples[14].state.enemies[1].x -1.937291985 != -1.946867484 (delta 0.0095754992968)
+  - samples[14].state.enemies[1].z -5.343609260 != -5.402841482 (delta 0.05923222220447)
+ERROR: 3 test(s) failed
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/TestRunner.gd:16)

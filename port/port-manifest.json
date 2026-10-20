@@ -1,0 +1,209 @@
+{
+  "schema": 1,
+  "source": {
+    "root": "versions/v3",
+    "version": "3.0.0",
+    "commit": "no-git",
+    "manifest": "port/source-manifest.sha256"
+  },
+  "target": {
+    "root": "godot",
+    "engine": "4.7.1",
+    "renderer": "gl_compatibility"
+  },
+  "parity": {
+    "level": "P1",
+    "tolerance": {
+      "position": 1e-05,
+      "angle": 1e-05,
+      "hp": 0,
+      "score": 0,
+      "eventSequence": 0
+    }
+  },
+  "mappings": [
+    {
+      "source": "versions/v3/src/core/constants.js",
+      "target": "core/constants.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "versions/v3/src/core/rng.js",
+      "target": "core/rng.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "versions/v3/src/core/grid.js",
+      "target": "core/grid.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "versions/v3/src/core/battle.js",
+      "target": "core/battle.gd",
+      "kind": "rules",
+      "gate": "G3"
+    },
+    {
+      "source": "versions/v3/src/content/tanks.js",
+      "target": "content/tanks.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/content/enemies.js",
+      "target": "content/enemies.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/content/levels.js",
+      "target": "content/levels.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/content/powerups.js",
+      "target": "content/powerups.json",
+      "kind": "content",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/content/assets.js",
+      "target": "content/assets.json",
+      "kind": "assets",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/app/game.js",
+      "target": "app/game.gd",
+      "kind": "app",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/view/stage.js",
+      "target": "view/stage.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "versions/v3/src/view/world.js",
+      "target": "view/world.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/view/tanks.js",
+      "target": "view/tank_layer.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/assets/tankRig.js",
+      "target": "view/tank_rig.gd",
+      "kind": "assets",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/assets/modelStore.js",
+      "target": "assets/model_store.gd",
+      "kind": "assets",
+      "gate": "G1"
+    },
+    {
+      "source": "versions/v3/src/view/projectiles.js",
+      "target": "view/projectile_layer.gd",
+      "kind": "view",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/view/fx.js",
+      "target": "view/fx.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "versions/v3/src/view/camera.js",
+      "target": "view/camera_rig.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "versions/v3/src/view/hud.js",
+      "target": "view/hud.gd",
+      "kind": "view",
+      "gate": "G6"
+    },
+    {
+      "source": "versions/v3/src/platform/input.js",
+      "target": "platform/input_router.gd",
+      "kind": "platform",
+      "gate": "G4"
+    },
+    {
+      "source": "versions/v3/src/platform/audio.js",
+      "target": "platform/audio.gd",
+      "kind": "platform",
+      "gate": "G6"
+    },
+    {
+      "source": "versions/v3/src/platform/storage.js",
+      "target": "platform/save.gd",
+      "kind": "platform",
+      "gate": "G6"
+    }
+  ],
+  "assets": [
+    {
+      "id": "sherman_hero",
+      "source": "versions/v3/assets/models/m4a1_sherman_hero.glb",
+      "target": "godot/assets/models/m4a1_sherman_hero.glb",
+      "sha256": "54b7286190de96ea4a90c2f746f0cb7d34c7b973a16f9dd7fc0d3d23af5c6ab4",
+      "scale": 0.22,
+      "up": "+Y",
+      "forward": "+Z",
+      "origin": "track_contact_ground",
+      "tags": {
+        "turret": "Turret_Pivot",
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle"
+      },
+      "clips": {
+        "drive": "Drive",
+        "fire": "Fire"
+      },
+      "lod": "hero"
+    },
+    {
+      "id": "sherman_troop",
+      "source": "versions/v3/assets/models/m4a1_sherman_troop.glb",
+      "target": "godot/assets/models/m4a1_sherman_troop.glb",
+      "sha256": "ff6a296b0bed2540d3e612efc215debbf577e8c0421bde7f36f0b6d0d5c7bc01",
+      "scale": 0.22,
+      "up": "+Y",
+      "forward": "+Z",
+      "origin": "track_contact_ground",
+      "tags": {
+        "turret": "Turret_Pivot",
+        "gun": "Gun_Pivot",
+        "muzzle": "GunMuzzle"
+      },
+      "clips": {
+        "drive": null,
+        "fire": "Fire"
+      },
+      "lod": "troop"
+    }
+  ],
+  "deviations": [
+    {
+      "id": "D001",
+      "summary": "源 spawn 事件的 payload.type 覆盖事件 type；Godot 核心为 parity 复现，视图修复待定",
+      "approved": false
+    }
+  ],
+  "status": "G4",
+  "evidence": "port/PILOT.md"
+}

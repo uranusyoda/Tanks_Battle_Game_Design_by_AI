@@ -1,0 +1,8 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+OpenGL API 4.1 Metal - 89.3 - Compatibility - Using Device: Apple - Apple M2
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1035)
+2026-10-20 11:13:02.246 godot[19758:156088] +[IMKClient subclass]: chose IMKClient_Modern
+AUTOTEST mode=eagle phase=lost score=0 hp=100 enemies=1 tile9_6=1 err=0
+AUTOTEST screenshot /Users/yoda/Desktop/工作/2026上半年/超脑AI/坦克大战3D/godot/../port/evidence/G4/eagle-fail.png size=(1280, 720)
