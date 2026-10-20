@@ -2,14 +2,11 @@ name: Deploy Playable
 
 # 把 versions/v3 发布成在线可玩版本：
 #   https://uranusyoda.github.io/Tanks_Battle_Game_Design_by_AI/
-# main 分支推送（且改动涉及 v3 或本工作流）时自动更新。
+# 任何推送进 main 的提交都会重新发布（构建只需几秒）。
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'versions/v3/**'
-      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:

@@ -15,6 +15,9 @@
 ### 新增
 
 - （在这里写：新增了什么、为什么、验收方式）
+- 2026-10-20 · 在线可玩版本：推送到 `main` 后由 `.github/workflows/deploy-pages.yml`
+  把本目录发布到 <https://uranusyoda.github.io/Tanks_Battle_Game_Design_by_AI/>。
+  验收：打开该地址能直接进入车库并开局（不需要本地 `npm start`）。
 
 ### 变更
 

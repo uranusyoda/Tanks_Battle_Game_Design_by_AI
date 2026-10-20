@@ -35,3 +35,11 @@ npm-debug.log*
 
 # Godot 导入缓存（工程内已有 .gitignore，这里兜底）
 .godot/
+
+# 项目内的 gh CLI 与登录状态（不提交）
+tools/bin/
+.ghconfig/
+
+# Godot 导出产物（体积大，放 Releases，不进仓库）
+build/
+*.app/
